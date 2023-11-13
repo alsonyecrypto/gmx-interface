@@ -161,6 +161,7 @@ export default function TVChartContainer({
     };
     tvWidgetRef.current = new window.TradingView.widget(widgetOptions);
     tvWidgetRef.current!.onChartReady(function () {
+      console.log("onChartReady")
       setChartReady(true);
       tvWidgetRef.current!.applyOverrides({
         "paneProperties.background": "#16182e",
